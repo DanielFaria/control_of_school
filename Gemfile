@@ -14,6 +14,8 @@ gem 'execjs'
 
 #NAVEGATION
 gem "simple-navigation", "~> 3.10.0"
+gem 'simple-navigation-bootstrap'
+
 
 group :development, :test do
   gem 'rspec-rails'
