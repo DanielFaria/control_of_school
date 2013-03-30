@@ -11,3 +11,75 @@
  *= require_self
  *= require_tree .
  */
+ /* DEFINE MENU LAYOUT **/
+#menu{
+    width: 30%;
+    margin: 0; padding: 0;
+    float: left;
+}
+
+#title{
+    background: #F5F5F5;
+    float: left;
+
+}
+
+#menu ul li {
+    margin: 0; padding: 0px;
+    border-bottom: 1px solid #CCC;
+    text-align: left;
+    list-style-type: none;
+}
+#menu a:link {
+    background: #F5F5F5;
+    color: #666;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 8px;
+    display: block;
+}
+
+#menu a:hover {
+    background: #E5F0FF;
+    color: #039;
+}
+
+#content{
+    float: left;
+    width: 70%;
+    text-align: center;
+
+}
+
+#section {
+    display: grid;
+    grid-columns: 150px 1fr 200px;
+    grid-rows: 50px 1fr 50px;
+}
+
+#section_header {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+#section_nav {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+#section_article {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+section aside {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+#section_footer {
+    grid-column: 2;
+    grid-row: 3;
+}
+
+

@@ -1,8 +1,9 @@
 ControleEscola::Application.routes.draw do
+  root :to => "home#index"
+  devise_for :users
 
-  devise_for :users, :path_names =>{ :sign_in =>"login" }
-  root :to => "pages#index"
-  get "pages/index"
+  resources :aboboras
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

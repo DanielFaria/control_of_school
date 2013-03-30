@@ -5,22 +5,17 @@ gem 'rails', '3.2.12'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-#DEVICE
-gem 'devise', '2.0.4'
-
 gem 'sqlite3'
+
 gem 'therubyracer'
 gem 'execjs'
+
+#DEVICE
+gem 'devise'
 
 #NAVEGATION
 gem "simple-navigation", "~> 3.10.0"
 gem 'simple-navigation-bootstrap'
-
-
-group :development, :test do
-  gem 'rspec-rails'
-end
-
 
 # Gems used only for assets and not required
 # in production environments by default.

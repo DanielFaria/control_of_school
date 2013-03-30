@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-ControleEscola::Application.config.secret_token = '746434723937a3fb3652481ff5802d64dde7a4a05618489b4e96cb65a36ea7cc74d50f99042c2314a5a1df0b5df8525f8272abb802cfdcaea7e32c3edea009b1'
+ControleEscola::Application.config.secret_token = '8f01d143bb412548ee51e185909ddf6cff6bb576f1aadfdc6d95777bbb7ea28377d9209c06c1efc29be9a4926c848c59b4fd10531e9fba04e58038396b1039f8'

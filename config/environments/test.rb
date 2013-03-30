@@ -7,22 +7,6 @@ ControleEscola::Application.configure do
   # and recreated between test runs. Don't rely on the data there!
   config.cache_classes = true
 
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.smtp_settings = {
-      :address              => "smtp.gmail.com",
-      :port                 => 587,
-      :domain               => 'www.controleescola.com',
-      :user_name            => 'teste@gmail.com',
-      :password             => 'teste',
-      :authentication       => 'plain',
-      :enable_starttls_auto => true
-  }
-
-  config.action_mailer.default_url_options = { :host => "localhost:3000" }
-
-
-
   # Configure static asset server for tests with Cache-Control for performance
   config.serve_static_assets = true
   config.static_cache_control = "public, max-age=3600"

@@ -7,7 +7,7 @@ Devise.setup do |config|
   config.mailer_sender = "please-change-me-at-config-initializers-devise@example.com"
 
   # Configure the class responsible to send e-mails.
-  config.mailer = "Devise::Mailer"
+  # config.mailer = "Devise::Mailer"
 
   # Automatically apply schema changes in tableless databases
   config.apply_schema = false
@@ -85,7 +85,7 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 10
 
   # Setup a pepper to generate the encrypted password.
-  # config.pepper = "2d211d62b7481b42b765c39e5bdaf2ef7ec536626ca8d7de669fc1b628d92b891c2b58965204dc2172ba397ebc231eb4806ef940ffd9f5721d8ddb9b09832807"
+  # config.pepper = "a551748b9a613617f8de83d39da0daa2fb27dbd3ce7796612ea8e4b30ac95f5cb5dfafa4c592b1531c8e4e98059b08d485cf4b76492adeb343adb179aa704e92"
 
   # ==> Configuration for :confirmable
   # A period that the user is allowed to access the website even without
