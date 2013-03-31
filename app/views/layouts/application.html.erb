@@ -43,12 +43,15 @@
         <div class="accordion-group">
           <div class="accordion-heading">
             <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
-              Collapsible Group Item #1
+              Controle de Usuários
             </a>
           </div>
           <div id="collapseOne" class="accordion-body collapse in">
             <div class="accordion-inner">
-              Anim pariatur cliche...
+              <%= link_to 'Register', new_user_registration_path %>
+            </div>
+            <div class="accordion-inner">
+              <%= link_to 'Listar ', new_professor_path %>
             </div>
           </div>
         </div>
