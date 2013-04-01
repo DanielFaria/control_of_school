@@ -7,9 +7,7 @@ class Professor < ActiveRecord::Base
 
   def initialize(attributes= nil )
     super(attributes)
-    self.send("#{:user}=",User.cria_usuario_do(self))
+    self.send("#{:user}=",User.cria_usuario_para(self))
   end
-
-
-
 end
+

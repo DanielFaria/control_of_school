@@ -1,5 +1,9 @@
+# -*- coding: UTF-8 -*
 require 'spec_helper'
 
 describe Aluno do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it "Quando um aluno é cadastrado deve ser criado um usuário vinculado a ele" do
+    aluno = FactoryGirl.build(:aluno)
+    aluno.user.should be_true;
+  end
 end

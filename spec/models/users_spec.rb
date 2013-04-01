@@ -15,13 +15,20 @@ describe User do
 
   it "O usuário gerado para professor deve ter a role professor" do
        professor = FactoryGirl.build(:professor)
-       usuario = User.cria_usuario_do(professor)
+       usuario = User.cria_usuario_para(professor)
        usuario.e_professor?.should be_true
   end
 
   it "O usuário gerado para aluno deve ter a role aluno" do
     aluno =   FactoryGirl.build(:aluno)
-    usuario = User.cria_usuario_do(aluno)
+    usuario = User.cria_usuario_para(aluno)
     usuario.e_aluno?.should be_true
   end
+
+  it "Só pode ser gerado usuário para professores e alunos" do
+    usuario = "test"
+    expect {User.cria_usuario_para(usuario)}.to raise_error(TypeError)
+  end
+
+
 end

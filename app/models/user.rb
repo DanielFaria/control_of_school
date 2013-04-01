@@ -14,22 +14,6 @@ class User < ActiveRecord::Base
   # attr_accessible :title, :body
 
 
-  # Before this method was called criaUsuarioPara
-  # It's me thinking as java' programmer
-  #def self.criaUsuarioPara(funcao)
-  def self.cria_usuario_para(funcao)
-    #Cuidando com is or Kind porque retornam true para superclasse
-    #http://stackoverflow.com/questions/3893278/ruby-kind-of-vs-instance-of-vs-is-a
-    if funcao.instance_of Professor or funcao.instance_of Aluno
-      return cria_usuario_do(funcao)
-    else
-      raise TypeError, 'Só pode ser criado usuário para Professores ou alunos'
-    end
-  end
-
-
-
-
   def e_professor?
     return role.eql? "Professor"
   end
@@ -38,13 +22,17 @@ class User < ActiveRecord::Base
     return role.eql? "Aluno"
   end
 
-  def self.cria_usuario_do(funcao)
-    role = cria_role_para(funcao)
-    password = cria_password(8)
-    return User.new :email => funcao.email,
-                    :role => cria_role_para(funcao),
-                    :password => password,
-                    :password_confirmation => password
+  #Before this method was called criaUsuarioPara
+  # It's me thinking as java' programmer
+  #def self.criaUsuarioPara(funcao)
+  def self.cria_usuario_para(funcao)
+    #Cuidando com is or Kind porque retornam true para superclasse
+    #http://stackoverflow.com/questions/3893278/ruby-kind-of-vs-instance-of-vs-is-a
+    if funcao.instance_of? Professor or funcao.instance_of? Aluno
+      return cria_usuario_do(funcao)
+    else
+      raise TypeError, 'Só pode ser criado usuário para Professores ou alunos'
+    end
   end
 
   #Credits to http://stackoverflow.com/questions/5966910/generate-unique-random-string-with-letters-and-numbers-in-lower-case
@@ -54,6 +42,18 @@ class User < ActiveRecord::Base
     password = tamanho.times.inject("") {|s, i| s << array[rand(array.size)]}
     return password
   end
+
+  private
+  def self.cria_usuario_do(funcao)
+    role = cria_role_para(funcao)
+    password = cria_password(8)
+    return User.new :email => funcao.email,
+                    :role => cria_role_para(funcao),
+                    :password => password,
+                    :password_confirmation => password
+  end
+
+
 
   private
   def self.cria_role_para(funcao)
