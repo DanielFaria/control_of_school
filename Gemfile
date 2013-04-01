@@ -17,6 +17,10 @@ gem 'devise'
 gem "simple-navigation", "~> 3.10.0"
 gem 'simple-navigation-bootstrap'
 
+group :development, :test do
+  gem 'rspec-rails'
+end
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

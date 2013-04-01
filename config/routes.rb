@@ -1,4 +1,10 @@
 ControleEscola::Application.routes.draw do
+  resources :alunos
+
+
+  resources :professores
+
+
   root :to => "home#index"
   devise_for :users ,:controllers => { :registrations => "registrations" }
 
