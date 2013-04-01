@@ -1,16 +1,13 @@
 # -*- coding: UTF-8 -*
 
 class Professor < ActiveRecord::Base
-  attr_accessible :email, :graduacao, :nascimento, :nome, :user
+  attr_accessible :email, :graduacao, :nascimento, :nome
   attr_readonly :user
   has_one :user, :as => :usuario
 
-
-
-
-
-  def after_initialize
-    puts "Criando usuário"
+  def initialize(attributes= nil )
+    super(attributes)
+    self.send("#{:user}=",User.cria_usuario_do(self))
   end
 
 
