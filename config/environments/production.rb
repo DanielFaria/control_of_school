@@ -1,6 +1,16 @@
 ControleEscola::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
+  config.action_mailer.smtp_settings = {
+      :address              => "smtp.gmail.com",
+      :port                 => 587,
+      :domain               => 'www.controleescola.com',
+      :user_name            => 'controledeescola@gmail.com',
+      :password             => 'leninasdfg',
+      :authentication       => 'plain',
+      :enable_starttls_auto => true
+  }
 
+  config.action_mailer.default_url_options = { :host => "localhost:3000" }
   # Code is not reloaded between requests
   config.cache_classes = true
 
