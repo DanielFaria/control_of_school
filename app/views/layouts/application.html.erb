@@ -1,13 +1,21 @@
 <!DOCTYPE html>
 <html>
+
 <head>
+  <script type="text/javascript">
+      $('[data-behaviour~=datepicker]').datepicker() ;
+      $('icon-calendar').datepicker() ;
+  </script>
+
+
+
   <title>Controle de Escola</title>
   <%= stylesheet_link_tag "application", :media => "all"  %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 
-<body>
+<body onload='funcao()'>
 <div class="navbar navbar-fixed-top">
   <div class="navbar-inner">
     <div class="container-fluid">
@@ -47,9 +55,6 @@
             </a>
           </div>
           <div id="collapseOne" class="accordion-body collapse in">
-            <div class="accordion-inner">
-              <%= link_to 'Register', new_user_registration_path %>
-            </div>
             <div class="accordion-inner">
               <%= link_to :Professores, professores_path %>
             </div>
