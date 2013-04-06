@@ -127,6 +127,9 @@ GEM
       activesupport (>= 2.3.2)
     simple-navigation-bootstrap (0.0.4)
       simple-navigation (>= 3.7.0)
+    simple_form (2.1.0)
+      actionpack (~> 3.0)
+      activemodel (~> 3.0)
     sprockets (2.2.2)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -167,6 +170,7 @@ DEPENDENCIES
   sass-rails (~> 3.2.3)
   simple-navigation (~> 3.10.0)
   simple-navigation-bootstrap
+  simple_form
   sqlite3
   therubyracer
   twitter-bootstrap-rails

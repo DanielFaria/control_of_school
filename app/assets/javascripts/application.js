@@ -17,12 +17,25 @@
 //= require bootstrap-datepicker/core
 //= require bootstrap-datepicker/locales/bootstrap-datepicker.es
 //= require bootstrap-datepicker/locales/bootstrap-datepicker.br
+/**
+ * Eu queria que uma máscara que validasse data
+ * deste jeito é possível digitar 88/88/888
+ *
+ * I want which mask will validate date
+ * and don't allow thing like this 99/00/9999
+ */
 $(document).on("focus", "[data-behaviour~='datepicker']", function(e){
     $(this).datepicker({"format": "dd/mm/yyyy", "weekStart": 1, "autoclose": true})
+    $(this).mask("99/99/9999");
 
 
 
 });
+
+$(document).on("focus", $("#datapicker"), function(e){
+    $(this).datepicker({"format": "dd/mm/yyyy", "weekStart": 1, "autoclose": true})
+});
+
 
 $(document).on("focus",$("#dp3 span"), function(e){
     $("#dp3 span").datepicker({"format": "dd/mm/yyyy", "weekStart": 1, "autoclose": true});

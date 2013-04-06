@@ -37,6 +37,7 @@ group :assets do
   gem 'twitter-bootstrap-rails'
   gem 'bootstrap-datepicker-rails', :require => 'bootstrap-datepicker-rails',
                               :git => 'git://github.com/Nerian/bootstrap-datepicker-rails.git'
+  gem 'simple_form'	
 end
 
 gem 'jquery-rails'
