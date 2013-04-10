@@ -46,6 +46,7 @@ GEM
       execjs
     coffee-script-source (1.6.2)
     commonjs (0.2.6)
+    database_cleaner (0.9.1)
     devise (2.0.4)
       bcrypt-ruby (~> 3.0)
       orm_adapter (~> 0.0.3)
@@ -79,6 +80,7 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.21)
     multi_json (1.7.2)
+    nokogiri (1.5.5)
     orm_adapter (0.0.7)
     polyglot (0.3.3)
     rack (1.4.5)
@@ -130,6 +132,7 @@ GEM
     simple_form (2.1.0)
       actionpack (~> 3.0)
       activemodel (~> 3.0)
+    spork (1.0.0rc3)
     sprockets (2.2.2)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -161,16 +164,19 @@ PLATFORMS
 DEPENDENCIES
   bootstrap-datepicker-rails!
   coffee-rails (~> 3.2.1)
+  database_cleaner
   devise
   factory_girl_rails (~> 4.0)
   jquery-rails
   less-rails
+  nokogiri
   rails (= 3.2.12)
   rspec-rails
   sass-rails (~> 3.2.3)
   simple-navigation (~> 3.10.0)
   simple-navigation-bootstrap
   simple_form
+  spork (~> 1.0rc)
   sqlite3
   therubyracer
   twitter-bootstrap-rails

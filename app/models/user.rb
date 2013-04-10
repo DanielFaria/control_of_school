@@ -9,9 +9,18 @@ class User < ActiveRecord::Base
   belongs_to :usuario,   :polymorphic => true
   ROLES = %w[Aluno Administador Professor]
 
+
+
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me,:role
+  attr_accessible :email, :password, :password_confirmation, :remember_me,:role, :update_at
   # attr_accessible :title, :body
+
+  #def initialize(attributes= nil )
+   # if (attributes)
+    #  attributes.store(:update_at,Time.now)
+    #end
+    #super(attributes)
+  #end
 
 
   def e_professor?

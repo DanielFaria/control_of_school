@@ -4,8 +4,7 @@ class CreateProfessores < ActiveRecord::Migration
       t.string :nome
       t.datetime :nascimento
       t.string :graduacao
-      t.string :email
-
+      t.integer :user_id
       t.timestamps
     end
   end

@@ -1,17 +1,17 @@
 module ApplicationHelper
 
-  def bootstrap_class_for flash_type
-    case flash_type
-      when :success
-        "alert-success"
-      when :error
-        "alert-error"
+  def twitterized_type(type)
+    case type
       when :alert
         "alert-block"
+      when :error
+        "alert-error"
       when :notice
         "alert-info"
+      when :success
+        "alert-success"
       else
-        flash_type.to_s
+        type.to_s
     end
   end
 

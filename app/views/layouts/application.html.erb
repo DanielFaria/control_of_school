@@ -32,7 +32,6 @@
             </p>
          <% end %>
       </div><!--/.nav-collapse -->
-
     </div>
   </div>
 </div>
@@ -72,8 +71,19 @@
       </div>
       </div><!--/.well -->
     </div><!--/span-->
-    <div class="span9 span-fixed-sidebar padding-top:60px">
+
+
+
+
+
+
+
+    <div class="span9 span-fixed-sidebar">
       <div class="hero-unit">
+        <div class="page-header">
+          <%= yield :h1 %>
+        </div>
+        <%= render :partial => '/shared/flash_messages' %>
         <%= yield %>
       </div>
 

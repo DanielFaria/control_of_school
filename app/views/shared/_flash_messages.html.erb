@@ -1,6 +1,8 @@
-<% flash.each do |type, message| %>
-    <div class="alert <%= bootstrap_class_for(type) %> fade in">
-      <button class="close" data-dismiss="alert">×</button>
-      <%= message %>
-    </div>
+<% [:notice, :error, :alert].each do |level| %>
+    <% unless flash[level].blank? %>
+        <div data-alert="alert" class="alert-message <%= twitterized_type(level) %> fade in">
+          <a class="close" href="#">×</a>
+          <%= content_tag :p, flash[level] %>
+        </div>
+    <% end %>
 <% end %>

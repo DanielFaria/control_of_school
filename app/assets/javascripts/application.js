@@ -37,27 +37,7 @@ $(document).on("focus", $("#datapicker"), function(e){
 });
 
 
-$(document).on("focus",$("#dp3 span"), function(e){
-    $("#dp3 span").datepicker({"format": "dd/mm/yyyy", "weekStart": 1, "autoclose": true});
-    var startDate = new Date(2012,1,20);
-    var endDate = new Date(2012,1,25);
-    $('#dp3 span').datepicker()
-        .on('changeDate', function(ev){
-            if (ev.date.valueOf() > endDate.valueOf()){
-                $('#alert').show().find('strong').text('The start date can not be greater then the end date');
-            } else {
-                $('#alert').hide();
-                startDate = new Date(ev.date);
-                $('#startDate').text($('#dp4').data('date'));
-            }
-            $('#dp3 span').datepicker('hide');
-        });
 
-});
-
-$(document).on("click", $("#calendario span"), function() {
-    $("#calendario span").datepicker({"format": "dd/mm/yyyy", "weekStart": 1, "autoclose": true});
-});
 
 
 

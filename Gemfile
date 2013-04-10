@@ -9,11 +9,15 @@ gem 'factory_girl_rails','~> 4.0'
 
 gem 'sqlite3'
 
+gem 'database_cleaner'
+
 gem 'therubyracer'
 gem 'less-rails'
 
 #DEVICE
 gem 'devise'
+#NOKOGIRI
+gem  'nokogiri'
 
 #NAVEGATION
 gem "simple-navigation", "~> 3.10.0"
@@ -21,6 +25,7 @@ gem 'simple-navigation-bootstrap'
 
 group :development, :test do
   gem 'rspec-rails'
+  gem 'spork', '~> 1.0rc'
 end
 
 # Gems used only for assets and not required
