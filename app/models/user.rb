@@ -6,7 +6,9 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  belongs_to :usuario,   :polymorphic => true
+  #Uers can belongs everyone which acess system: Students e Teachers
+  #Polyphormic association is necessary
+  belongs_to :user,:polymorphic => true
   ROLES = %w[Aluno Administador Professor]
 
 

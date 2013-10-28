@@ -7,7 +7,7 @@ gem 'rails', '3.2.12'
 
 gem 'factory_girl_rails','~> 4.0'
 
-gem 'sqlite3'
+gem 'pg'
 
 gem 'database_cleaner'
 
@@ -46,6 +46,9 @@ group :assets do
 end
 
 gem 'jquery-rails'
+group :production do
+  gem "pg"
+end
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
@@ -60,4 +63,4 @@ gem 'jquery-rails'
 # gem 'capistrano'
 
 # To use debugger
-# gem 'debugger'
+ gem 'debugger'
